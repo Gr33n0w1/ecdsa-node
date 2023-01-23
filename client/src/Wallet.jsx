@@ -1,6 +1,6 @@
 import server from "./server";
 
-function Wallet({ address, setAddress, balance, setBalance }) {
+function Wallet({ address, setAddress, balance, setBalance, signature, setSignature }) {
   async function onChange(evt) {
     const address = evt.target.value;
     setAddress(address);
@@ -19,7 +19,7 @@ function Wallet({ address, setAddress, balance, setBalance }) {
       <h1>Your Wallet</h1>
 
       <label>
-        Wallet Address
+        Enter the signature
         <input placeholder="Type an address, for example: 0x1" value={address} onChange={onChange}></input>
       </label>
 
